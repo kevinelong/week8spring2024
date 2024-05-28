@@ -1,0 +1,33 @@
+body {
+    font-size: 200%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.board {
+    display: flex;
+    gap: 1rem;
+}
+
+.side {
+    display: inline-block;
+}
+
+select {
+    color: white;
+}
+
+.home select {
+    background-color: darkblue;
+    font-size: 4rem;
+}
+
+.away select {
+    background-color: darkred;
+    font-size: 4rem;
+}
+
+.titles {
+    font-size: 2rem;
+    font-weight: lighter;
+    color: goldenrod;
+}

@@ -1,0 +1,94 @@
+<!-- 1. Create an editable Score Board with two teams -->
+<!-- 2a. Convert HTML to JS Components (AKA helper functions) -->
+<!-- 2b. Use document.createElement("") not template strings -->
+<!-- 3. Keep track of score in an object as changes are made. -->
+<!-- 4. display details including who is ahead in console on change. -->
+<!-- 5. add extra buttons to increase scores by common values e.g. 1,5,7,10 -->
+<!-- 6. add extra buttons to decrease scores by common values e.g. 1,5,7,10 -->
+<!-- Does the data drive the display; the display drives the data or both? -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Board</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body style="color: silver; background:  #363;">
+    <div class="board">
+        <table class="side">
+            <tr>
+                <th class="home">
+                    <select>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                    </select>
+                </th>
+                <th class="home">
+                    <select>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                    </select>
+                </th>
+            </tr>
+            <tr class="titles">
+                <th colspan="2">HOME</th>
+            </tr>
+        </table>
+        <table class="side">
+            <tr>
+                <th class="away">
+                    <select>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                    </select>
+                </th>
+                <th class="away">
+                    <select>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                    </select>
+                </th>
+            </tr>
+            <tr class="titles">
+                <th colspan="2">AWAY</th>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
