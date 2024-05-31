@@ -1,0 +1,111 @@
+<head>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+    <img src="" alt="PacMan" id="hero" class="sprite">
+</body>
+<script>
+    //Pac-Man,[a] originally called Puck Man in Japan, 
+    // is a 1980 maze action video game
+    //  developed and released by Namco for arcades. 
+    //  In North America, the game was released by Midway Manufacturing
+    //   as part of its licensing agreement with Namco America. 
+
+
+    // The player controls Pac-Man, 
+    // who must eat all the dots inside an enclosed maze
+    //  while avoiding four colored ghosts. 
+    //  Eating large flashing dots called "Power Pellets" 
+    //  causes the ghosts to temporarily turn blue, 
+    //  allowing Pac-Man to eat them for bonus points. 
+    //  collect fruit for bonus points 
+
+    //NOUNS people place things
+    //VERBS action words for doing something
+    //ADJ/ADV describing or counting
+
+    //NOUNS classes/objects: Game, PacMan, Player, Ghost, Dot, Maze, Fruit, Direction, Point?
+    //VERBS METHODS FUNCTIONs: .eat() .avoid() Dot.flash(), pacman.move(direction)
+    // pacman.eat(what)
+    //ADJ isColored, .color, dot.isFlashing, ghost.isBlue, ghost.blueRemainingTime
+    // dot.pointValue, dot.location, ghost.direction, player.points = 0, player.lives = 3
+
+    //IS-A, HAS-A
+    //THe Game has a list of Players.
+    // Each player has three lives.
+    //The game has a levels/mazes, and four ghosts, 
+    //Each
+    class Direction {
+        static UP = 0
+        static RIGHT = 1
+        static DOWN = 2
+        static LEFT = 3
+    }
+    class Location {
+        constructor(x = 0, y = 0) {
+            this.x = this.x;
+            this.y = this.y;
+        }
+    }
+    class PacMan {
+        constructor(location, direction) {
+            this.location = location || new Location();
+            this.direction = direction || Direction.LEFT;
+        }
+        setDirection(direction) {
+            this.direction = direction;
+            //update screen?
+        }
+        toString() {
+            return ["U", "C", "n", ")"][this.direction];
+        }
+        getImage() {
+            return [
+                "up.png",
+                "right.png",
+                "down.png",
+                "left.png"
+            ][this.direction];
+        }
+    }
+    class Game {
+        constructor() {
+            this.pacman = new PacMan();
+            this.lastKey = 37; //left
+            this.run()
+        }
+        run() {
+            // while(!this.quitting){
+            this.render()
+            this.input()
+            this.update()
+            // }
+            window.requestAnimationFrame(e=>this.run());
+        }
+        render() {
+            hero.src = "./images/" + this.pacman.getImage()
+        }
+        input() {
+
+            const keymap = {
+                37: Direction.LEFT,
+                38: Direction.UP,
+                39: Direction.RIGHT,
+                40: Direction.DOWN,
+            };
+
+            this.pacman.direction = keymap[this.lastKey];
+
+        }
+        update() {
+
+        }
+    }
+
+    const game = new Game();
+    document.addEventListener("keydown", (event) => {
+        game.lastKey = event.keyCode;
+    });
+
+</script>

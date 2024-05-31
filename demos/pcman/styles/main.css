@@ -1,0 +1,15 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+img {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+.sprite {
+    width: 10vw;
+    height: 10vw;
+}
